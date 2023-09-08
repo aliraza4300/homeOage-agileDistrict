@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galdeano&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <style>
+      :root {
+        --white: #fff;
+        --black: #000;
+        --bg-body: #f5f6fa;
+        --pink-ed: #ed145b;
+        --pink-ed18: #ed185b;
+        --dark-21: #212529;
+        --teal-4f: #4fdbd0;
+        --dark-af: #afb4c6;
+        --dark-59: #595f6f;
+        --dark-e7: #e7e8ef;
+        --dark-595: #595f70;
+        --purple-66: #662d91;
+        --blue-44: #449ecb;
+        --green-00e: #00efc5;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--dark-21);
+        background-color: var(--bg-body);
+      }
+
+      .form-label {
+        font-size: 12px;
+      }
+
+      .form-control {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        ::placeholder {
+          font-style: italic;
+        }
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+      }
+
+      .btn-primary {
+        animation: zoom-in-zoom-out 2s ease-out infinite;
+        background: #00efc5;
+        font-family: "Montserrat";
+        font-size: 1.375rem;
+        border-radius: 3px;
+        box-shadow: 4px 4px 0 0 #7b7b7b;
+        width: 90%;
+      }
+      .btn-primary:hover {
+        background: #00efc5;
+      }
+
+      .list-style-none {
+        list-style: none;
+      }
+
+      .teal-4f {
+        color: var(--teal-4f);
+      }
+
+      .bg-green-00e {
+        background-color: var(--green-00e) !important;
+      }
+      .visibly_younger_text{
+        font-size: 60px;
+        line-height: 50px;
+      }
+
+
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .simulation_inner{
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+        .exclusive_section_img_container{
+            height: 100vh ;
+        }
+        
+      }
+
+      @media screen and (min-width: 375px) and (max-width: 767px) {
+        .simulation_inner{
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+        .exclusive_section_img_container{
+            height: 100vh ;
+        }.benefits_content_sec{
+            margin-top: 30rem;
+        }
+        .info_bar_text{
+          font-size: 14px;
+        }
+        .visibly_younger_text{
+          font-size: 45px !important;
+          line-height: 40px;
+        }
+        .fs-14{
+          font-size: 14px;
+        }
+        .featured_absolute_img_left{
+          left: 60px !important;
+        }
+        .featured_absolute_img_size{
+          width: 100px !important;
+          height: 35px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div
+        class="hero w-100"
+        style="
+          background: url(./img/bgTop_1111.jpg) top center;
+          height: max-content;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="d-flex justify-content-center pt-2"
+          style="background-color: #ed145b"
+        >
+          <p class="text-white text-center info_bar_text px-3 px-lg-0">
+            <span class="fw-bold">ATTENTION:</span> Due to increased demand for
+            our free trial we cannot guarantee supply.
+            <br />
+            As of <span>Friday, September 1st, 2023</span> we currently have the
+            product IN STOCK and are ready to ship within 24 hours of purchase.
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div
+            class="col-12 col-lg-11 col-xl-8 d-flex flex-column flex-lg-row gap-3 gap-lg-2 align-items-center align-items-lg-start justify-content-between"
+            style="height: 100%"
+          >
+            <div
+              class="col-3 d-none d-lg-flex"
+              style="align-self: flex-end; padding-bottom: 80px"
+            >
+              <img src="img/cream.png" alt="" />
+            </div>
+
+            <div
+              class="col-10 col-lg-5 d-flex flex-column justify-content-start align-items-center ps-3 pt-3"
+            >
+              <div
+                class="d-flex gap-3 justify-content-center align-items-center ps-4"
+              >
+                <div class="d-flex gap-0 flex-column align-items-end">
+                  <h4 class="fs-6 mb-0 fw-bold">Internet Exclusive Offer</h4>
+                  <p class="fs-6 mb-0">Available to US Residents Only</p>
+                </div>
+                <div class="">
+                  <img src="img/flag.png" alt="" class="img-fluid"/>
+                </div>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center py-2 py-lg-4"
+              >
+                <img src="img/logo.png" alt="" />
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-center flex-column text-center heading-galdeano"
+                style="color: #ed185b; font-family: Galdeano"
+              >
+                <span class="fs-3">ACHIEVE</span>
+                <h1 class="visibly_younger_text">
+                  VISIBLY <br />
+                  YOUNGER
+                </h1>
+                <p class="fs-3">LOOKING SKIN</p>
+              </div>
+              <div class="text-center mb-2">
+                <h5 class="info_bar_text fw-bold">Brighten Skin's Appearance</h5>
+                <ul
+                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                >
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center mb-2">
+                <h5 class="info_bar_text fw-bold">Restor Your Radiant, Firmer Skin</h5>
+                <ul
+                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                >
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="text-center mb-2">
+                <h5 class="info_bar_text fw-bold">Smooth Look of Stubborn Fine Lines</h5>
+                <ul
+                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                >
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                  <li>
+                    <a href=""><i class="fa fa-star teal-4f"></i></a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-4">
+                <p class="text-light fs-5 fw-bold mb-0 pe-md-5 pe-lg-1">
+                  HURRY! CLAIM YOUR TRIAL TODAY!
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-10 col-lg-4 card border-top-0 mt-4 mt-lg-0 rounded-0"
+              style="border: 3px solid #afb4c6"
+            >
+              <div
+                class="card-header text-white rounded-0 py-4 px-2 text-uppercase fw-bold fs-md-7"
+                style="background-color: #595f6f"
+              >
+                Only
+                <span class="text-white rounded px-1 py-2 fw-bold bg-dark"
+                  >2</span
+                >
+                <span class="text-white rounded px-1 py-2 fw-bold bg-dark"
+                  >5</span
+                >
+                <span class="text-white rounded px-1 py-2 fw-bold bg-dark"
+                  >0</span
+                >
+                Trials Available Now!
+              </div>
+              <div class="card-body" style="background-color: #e7e8ef">
+                <h2 class="py-3 text-center fw-bold fs-5 text-uppercase">
+                  Tell us where to send
+                  <span class="d-block fw-bolder fs-4">Your Trial Bottle</span>
+                </h2>
+
+                <form id="myForm">
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >First Name:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="First Name"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >Last Name:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="Last Name"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >Address:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="Address"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >Zip:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="Zip"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >City:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="City"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >State:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <select class="form-select fs-8 px-1" aria-label="">
+                        <option selected></option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >Phone:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="Phone"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="input-group mb-2 row m-0">
+                    <div class="col-md-4 col-lg-3 pe-0 ps-0">
+                      <label
+                        for=""
+                        class="form-label fs-8 mb-0 text-end mt-1 d-flex d-md-block"
+                        >Email:</label
+                      >
+                    </div>
+                    <div class="col-md-8 px-0 col-lg-9">
+                      <input
+                        type="text"
+                        class="form-control fs-8 px-1"
+                        id="fName"
+                        placeholder="Phone"
+                        name=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-2 text-center fs-8 mt-4"
+                    style="font-size: 13px; font-weight: 500"
+                  >
+                    <p>
+                      <i class="fa fa-lock"></i> Secure 258 Bit Encrypted
+                      Connection
+                    </p>
+                  </div>
+
+                  <div class="d-flex mb-2 justify-content-center">
+                    <button
+                      class="btn btn-primary text-center mb-3 mt-1 py-2 px-4 border-0 fw-bold text-dark"
+                    >
+                      <i class="fa fa-solid fa-play fs-6"></i> &nbsp;Rush My
+                      Trial
+                    </button>
+                  </div>
+
+                  <div class="d-flex gap-3 mb-4 mt-3 justify-content-center">
+                    <a href=""><img src="img/mcafee.png" alt="" /></a>
+                    <a href=""><img src="img/norton.png" alt="" /></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center">
+        <div
+          class="col-10 col-lg-11 col-xl-8 d-flex flex-column bg-white mt-4 mt-lg-0 pb-3"
+        >
+          <div
+            class="col-12 col-lg-7 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+          >
+            <h2
+              class="col-12 col-md-3  d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              style="background-color: #ed145b"
+            >
+              Featured
+            </h2>
+            <h2
+              class="col-12 col-md-9 blkH2 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+            >
+              The Science Behind Martha's Cosmetics
+            </h2>
+          </div>
+          <div class="d-flex flex-lg-row flex-column">
+            <div class="col-12 col-lg-7">
+              <div class="p-3 p-md-5 d-flex align-items-start flex-column gap-2">
+                <p class="">
+                  Seventy five percent of our skin is comprised of water and
+                  collagen. Our skin is exposed to harsh UVA and UVB radiation
+                  resulting in age spots, fine lines, and wrinkles. As we age,
+                  our bodies produce less and less collagen, leading to the
+                  formation of wrinkles and fine lines. Most anti-aging products
+                  use fragments of hydrolyzed collagen containing molecules too
+                  large for the skin with conventional formulas. Martha's
+                  Cosmetics's breakthrough formula delivers whole collagen
+                  molecules to the skin. The peptide-rich wrinkle serum is
+                  applied to the skin, rebuilding and rejuvenating the skin.
+                </p>
+
+                <div class="position-relative">
+                  <img src="./img/logo.png" alt="" class="position-absolute featured_absolute_img_size featured_absolute_img_left" style="width: 130px; height: 40px; top: -6px; left: 90px;"/>
+                  <img src="./img/logo.png" alt="" class="position-absolute featured_absolute_img_size" style="width: 130px; height: 40px; top: -6px; right: 0;" />
+                  
+                  <img src="./img/graph.jpg" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-lg-5 d-flex justify-content-center align-items-lg-end"
+            >
+              <img src="./img/science.jpg" alt="" class="w-100 img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center">
+        <div class="col-10 col-lg-11 col-xl-8 d-flex flex-column bg-white pt-4">
+          <div
+            class="w-100 d-flex justify-content-center justify-content-lg-end"
+            style="
+              background: url(./img/simulation.jpg) top center;
+              height: max-content;
+              background-repeat: no-repeat;
+            "
+          >
+            <div class="col-12 col-lg-5 position-relative simulation_inner" style="">
+              <img
+                src="img/spot-header.png"
+                alt=""
+                class="spot-header position-absolute d-lg-flex d-none"
+                style="top: -40px"
+              />
+              <div class="d-flex flex-column benefits_content_sec gap-0 gap-lg-3 pt-5 pt-xl-5">
+                <div
+                  class="text-white d-flex flex-wrap p-2"
+                  style="background-color: #595f70; font-size: 22px"
+                >
+                  BENEFITS OF Martha's Cosmetics Anti-Wrinkle Cream
+                </div>
+
+                <div
+                  class="text-black d-flex flex-column gap-1 px-4 py-2"
+                  style="
+                    background-color: #fff;
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-family: monsterrat;
+                    border-left: 5px solid #ed145b;
+                  "
+                >
+                  <p class="fw-bold mb-0">
+                    ELIMINATES THE LOOK OF DARK CIRCLES
+                  </p>
+                  <p class="d-flex flex-wrap mb-0">
+                    Restores nourishment in form of hydration to the under-eye
+                    area removing puffiness.
+                  </p>
+                </div>
+
+                <div
+                  class="text-black d-flex flex-column gap-1 px-4 py-2"
+                  style="
+                    background-color: #fff;
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-family: monsterrat;
+                    border-left: 5px solid #662d91;
+                  "
+                >
+                  <p class="fw-bold mb-0">REDUCES THE APPEARANCE OF WRINKLES</p>
+                  <p class="d-flex flex-wrap mb-0">
+                    The boost in collagen and elastin helps retain the skin's
+                    dermal structure which results in reduction of the look of
+                    fine lines.
+                  </p>
+                </div>
+
+                <div
+                  class="text-black d-flex flex-column gap-1 px-4 py-2"
+                  style="
+                    background-color: #fff;
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-family: monsterrat;
+                    border-left: 5px solid #449ecb;
+                  "
+                >
+                  <p class="fw-bold mb-0">ENHANCES SKIN HYDRATION</p>
+                  <p class="d-flex flex-wrap mb-0">
+                    Active Ingredients facilitate in trapping moisture, which in
+                    turn hydrates the skin and prevents cracking.
+                  </p>
+                </div>
+
+                <div
+                  class="text-black d-flex flex-column gap-1 px-4 py-2"
+                  style="
+                    background-color: #fff;
+                    font-size: 15px;
+                    line-height: 18px;
+                    font-family: monsterrat;
+                    border-left: 5px solid #00efc5;
+                  "
+                >
+                  <p class="fw-bold mb-0">COUNTERS EFFECTS OF STRESS</p>
+                  <p class="d-flex flex-wrap mb-0">
+                    Boosts skin immunity and prevents damaging effects of free
+                    radicals. Eliminates debris that makes skin dull and
+                    discolored.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3" style="background-color: #595f70">
+            <div class="d-flex flex-column text-white">
+              <p class="fs-3 fw-bold mb-0">
+                ACHIEVE VISIBLY YOUNGER LOOKING SKIN!
+              </p>
+              <p class="fs-4 mb-0">SUPPLIES ARE LIMITED. GET YOURS TODAY!</p>
+            </div>
+            <div class="d-flex mb-2 justify-content-center ms-lg-4">
+              <button
+                class="btn btn-primary text-center mt-1 py-3 px-3 w-100 border-0 fw-bold text-dark"
+              >
+                <i class="fa fa-solid fa-play fs-6"></i> &nbsp;Rush My Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 d-flex justify-content-center my-4">
+        <div class="col-10 col-lg-11 col-xl-8 d-flex flex-column bg-white pb-3 h-100">
+          <div
+            class="col-12 col-lg-9  position-relative exclusive_section w-subheading bg-black text-white d-flex flex-column flex-md-row"
+            style="height: max-content;"
+          >
+            <h2
+              class="col-12 col-md-3 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              style="background-color: #ed145b"
+            >
+              EXCLUSIVE
+            </h2>
+            <h2
+              class="blkH2 col-12 col-md-9 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+            >
+              Achieve Healthy, Younger Looking Skin
+            </h2>
+          </div>
+
+          <div class="d-flex flex-lg-row flex-column">
+            <div class="col-12 col-lg-6">
+              <div class="p-3 p-md-5 d-flex align-items-start flex-column gap-2">
+                <ul class="list-style-none p-0 m-0">
+                  <li class="d-flex mb-2 gap-3 align-items-center fw-bold">
+                    <span class="p-1 bg-green-00e d-inline"></span> NO INVASIVE
+                    SURGERY
+                  </li>
+                  <li class="d-flex mb-2 gap-3 align-items-center fw-bold">
+                    <span class="p-1 bg-green-00e d-inline"></span> NO PAINFUL
+                    INJECTIONS
+                  </li>
+                  <li class="d-flex mb-2 gap-3 align-items-center fw-bold">
+                    <span class="p-1 bg-green-00e d-inline"></span> NO EXPENSIVE
+                    LASER
+                  </li>
+                </ul>
+                <p class="">
+                  Your skin is the largest organ on your body but one of the
+                  most exposed. As a child, your skin is smooth, healthy and
+                  vibrant. But as we age, it can become wrinkled, saggy and
+                  discolored. Why? Our skin dries and loses its elasticity as it
+                  is exposed to a host of factors which attack your skin
+                  including age, wind, dryness, sun damage and free radicals.
+                  <br /><br />
+                  Each of these factors reduce our skin’s ability to keep its
+                  elasticity and firmness. Age also leads to the loss and
+                  breakdown of collagen in the dermal layer of your skin.
+                  Collagen is key to provide structural support to your skin. As
+                  our body’s produce less, your skin begins to sag and wrinkle.
+                  <br /><br />
+                  Your best defense against these hostile factors is choosing
+                  the right skin care product that may help reduce visible signs
+                  of aging. Martha's Cosmetics is just the solution!
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-12 col-lg-6 exclusive_section_img_container d-flex align-items-center justify-content-center"
+              style="
+                background: url(./img/sec-3-jar.jpg) top center;
+                background-repeat: no-repeat;
+              "
+            >
+              <img src="./img/cream.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center">
+        <div class="col-10 col-lg-11 col-xl-8 bg-white">
+          <div class="d-flex flex-lg-row flex-column">
+            <div class="col-12 col-lg-6 d-flex position-relative">
+              <img src="./img/girls_1.jpg" alt="" class="w-100 img-fluid" />
+              <p class="position-absolute text-white fs-5 fw-bold text-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 28px;">#Martha's <br/>Cosmetics
+                <br/>It's Unanimous</p>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div
+                class="col-12 w-100 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+              >
+                <h2
+                  class="col-12 col-md-4 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+                  style="background-color: #ed145b"
+                >
+                  SPOTLIGHT
+                </h2>
+                <h2
+                  class="col-12 col-md-8 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+                >
+                  What's all the buzz about?
+                </h2>
+              </div>
+              <div class="p-3 p-md-5 d-flex align-items-start flex-column gap-2">
+                <p class="fw-bold" style="font-size: 20px">
+                  The New Injection-Free Solution
+                </p>
+                <p class="">
+                  Ever wonder how celebrities keep their skin looking so
+                  flawless and wrinkle-free? For porcelain looking skin,
+                  celebrities look for anti-aging creams which give them the
+                  appearance of smooth, supple, wrinkle-free skin.
+                  <br /><br />
+                  Martha's Cosmetics is your secret to radiant, beautiful skin
+                  that looks years younger. Don’t endure the physical pain and
+                  expense of costly procedures and surgeries. Martha's Cosmetics
+                  works naturally to help replenish your skin’s moisture,
+                  firming its appearance and restoring your natural glow to
+                  reveal a younger-looking you.
+                </p>
+
+                <div class="w-100 d-flex flex-column align-items-center">
+                  <img src="./img/quote-1.jpg" alt="" class="" />
+                  <img src="./img/quote-2.jpg" alt="" class="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3" style="background-color: #595f70">
+            <div class="d-flex flex-column text-white">
+              <p class="fs-3 fw-bold mb-0">
+                ACHIEVE VISIBLY YOUNGER LOOKING SKIN!
+              </p>
+              <p class="fs-4 mb-0">SUPPLIES ARE LIMITED. GET YOURS TODAY!</p>
+            </div>
+            <div class="d-flex mb-2 justify-content-center ms-lg-4">
+              <button
+                class="btn btn-primary text-center mt-1 py-3 px-3 w-100 border-0 fw-bold text-dark"
+              >
+                <i class="fa fa-solid fa-play fs-6"></i> &nbsp;Rush My Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center mt-4">
+        <div class="col-10 col-lg-11 col-xl-8 d-flex flex-column flex-md-row gap-1 pb-3">
+          <img src="./img/ing-1.jpg" alt="" class="col-md-4" />
+          <img src="./img/ing-2.jpg" alt="" class="col-md-4" />
+          <img src="./img/ing-3.jpg" alt="" class="col-md-4" />
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-center mt-4">
+        <div class="col-10 col-lg-11 col-xl-8 bg-white">
+          <div
+            class="col-12 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+          >
+            <h2
+              class="col-12 col-md-5 col-lg-4 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              style="background-color: #ed145b"
+            >
+              LIMITED TIME OFFER
+            </h2>
+            <h2
+              class="col-12 col-md-7 col-lg-8 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+            >
+              Only Available To First Time Users
+            </h2>
+          </div>
+          <div
+            class="col-12 d-flex"
+            style="
+              background: url(./img/footBkg.jpg) top center;
+              height: 100%;
+              background-repeat: no-repeat;
+            "
+          >
+            <div
+              class="col-0 col-lg-6 d-flex justify-content-end align-items-center"
+            >
+              <img src="./img/qualityBadge.png" alt="" class="img-fluid" />
+            </div>
+            <div class="col-12 col-lg-6 d-flex justify-content-md-end justify-content-lg-center gap-4 gap-md-1 gap-lg-4">
+              <div class="col-4 d-flex align-items-center">
+                <img src="./img/cream.png" alt="" class="img-fluid" />
+              </div>
+              <div class="col-5 d-flex flex-column align-items-center py-3">
+                <div
+                  class="d-flex align-items-center justify-content-center py-2"
+                >
+                  <img src="img/logo.png" alt="" />
+                </div>
+                <div
+                  class="d-flex align-items-center justify-content-center flex-column text-center heading-galdeano"
+                  style="color: #ed185b; font-family: Galdeano"
+                >
+                  <span class="fs-3">ACHIEVE</span>
+                  <h1 class="visibly_younger_text">
+                    VISIBLY <br />
+                    YOUNGER
+                  </h1>
+                  <p class="fs-3 mb-1">LOOKING SKIN</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button
+                    class="btn btn-primary text-center py-2 px-2 border-0 fw-bold text-dark"
+                  >
+                    <i class="fa fa-solid fa-play fs-6"></i> &nbsp;Rush My Trial
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container mx-auto container-sm d-flex justify-content-center">
+          <div class="col-10 col-md-8 col-lg-10 col-xl-8 text-center pt-4">
+            <p class="mb-1 fs-14">
+              This product has not been evaluated by the FDA. This product is
+              not intended to diagnose, treat, cure or prevent any disease.
+            </p>
+            <p class="mb-1 fs-14">
+              Results in description are illustrative and may not be typical
+              results and individual results may vary.
+            </p>
+            <p class="mb-1 fs-14">
+              The depictions on this page are fictitious and indicative of
+              potential results.Representations regarding the efficacy and
+              safety of Martha's Cosmetics™ Anti-Wrinkle Cream have not been
+              scientifically
+            </p>
+            <p class="mb-4 fs-14">
+              substantiated or evaluated by the Food and Drug Administration.
+            </p>
+            <div class="mb-2 fs-14" >
+              <a href="" style="color: #8a8a8a; text-decoration: none;">CONTACT US</a> | <a href="" style="color: #8a8a8a; text-decoration: none;">TERMS AND CONDITIONS</a> |
+              <a href="" style="color: #8a8a8a; text-decoration: none;">PRIVACY POLICY</a>
+            </div>
+            <p class="fs-14 fs-14" style="color: #8a8a8a;">2023 © MARTHA'S COSMETICS</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
