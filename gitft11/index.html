@@ -45,6 +45,24 @@
         background-color: var(--bg-body);
       }
 
+      .font-monsterrat {
+        font-family: "Montserrat";
+      }
+
+      .letter-close {
+        letter-spacing: -1px;
+      }
+
+      .bg-black {
+        background-color: var(--black);
+      }
+      .font-impact {
+        font-family: Impact;
+      }
+      .fs-8 {
+        font-size: 12px;
+      }
+
       .form-label {
         font-size: 12px;
       }
@@ -52,7 +70,7 @@
       .form-control {
         border: 1px solid #ccc;
         border-radius: 5px;
-        font-size: 14px;
+        font-size: 12px;
         ::placeholder {
           font-style: italic;
         }
@@ -87,49 +105,108 @@
       .bg-green-00e {
         background-color: var(--green-00e) !important;
       }
-      .visibly_younger_text{
+      .visibly_younger_text {
         font-size: 60px;
         line-height: 50px;
       }
 
+      /* .hero-cream {
+          position: absolute;
+          top: 50%;
+          height: fit-content;
+          transform: translate(7%, 20%);
+        }
+
+        @media screen and (min-width: 992px) and (max-width: 1440px) {
+          .hero-cream {
+          position: absolute;
+          top: 50%;
+          height: fit-content;
+          transform: translate(7%, 30%);
+        }
+      } */
+      .hero-calculator {
+        max-width: 320px;
+      }
+
+      .blkH2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25%;
+        width: 10px;
+        background: #000;
+        transform: skew(353deg);
+        transform-origin: top;
+      }
+
+      .blkH3::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 33%;
+        width: 10px;
+        background: #000;
+        transform: skew(353deg);
+        transform-origin: top;
+      }
 
       @media screen and (min-width: 768px) and (max-width: 991px) {
-        .simulation_inner{
-            display: flex;
-            align-items: flex-end;
+        .simulation_inner {
+          display: flex;
+          align-items: flex-end;
         }
-        .exclusive_section_img_container{
-            height: 100vh ;
+        .exclusive_section_img_container {
+          height: 100vh;
         }
-        
+        .blkH2::before {
+        display: none;
+      }
+
+      .blkH3::before {
+        display: none;
+      }
       }
 
       @media screen and (min-width: 375px) and (max-width: 767px) {
-        .simulation_inner{
-            height: 100vh;
-            display: flex;
-            align-items: flex-end;
+        .simulation_inner {
+          height: 100vh;
+          display: flex;
+          align-items: flex-end;
         }
-        .exclusive_section_img_container{
-            height: 100vh ;
+        .exclusive_section_img_container {
+          height: 100vh;
         }
-        .info_bar_text{
+        .info_bar_text {
           font-size: 14px;
         }
-        .visibly_younger_text{
+        .visibly_younger_text {
           font-size: 45px !important;
           line-height: 40px;
         }
-        .fs-14{
+        .fs-14 {
           font-size: 14px;
         }
-        .featured_absolute_img_left{
+        .featured_absolute_img_left {
           left: 60px !important;
         }
-        .featured_absolute_img_size{
+        .featured_absolute_img_size {
           width: 100px !important;
           height: 35px !important;
         }
+        .hero-calculator {
+          max-width: 100%;
+        }
+
+        .blkH2::before {
+        display: none;
+      }
+
+      .blkH3::before {
+        display: none;
+      }
       }
     </style>
   </head>
@@ -138,7 +215,7 @@
       <div
         class="hero w-100"
         style="
-          background: url(./img/bgTop_1111.jpg) top center;
+          background: url(./img/bgTop_1111.png) top center;
           height: max-content;
           background-repeat: no-repeat;
         "
@@ -158,112 +235,137 @@
 
         <div class="d-flex justify-content-center">
           <div
-            class="col-12 col-lg-11 col-xl-8 d-flex flex-column flex-md-row gap-3 gap-md-0 gap-lg-2 align-items-center align-items-md-start justify-content-md-end justify-content-between"
+            class="col-12 col-lg-11 col-xl-8 d-flex flex-column flex-md-row gap-3 gap-md-0 align-items-center align-items-md-start justify-content-md-end justify-content-between"
             style="height: 100%"
           >
             <div
-              class="col-3 d-none d-lg-flex"
-              style="align-self: flex-end; padding-bottom: 80px"
+              class="col-3 d-none position-relative d-lg-flex justify-content-end"
+              style="height: 100vh !important"
             >
-              <img src="img/cream.png" alt="" />
+              <img
+                src="img/cream.png"
+                alt=""
+                class="hero-cream w-100"
+                style="height: fit-content; transform: translate(6%, 170%)"
+              />
             </div>
 
             <div
-              class="col-10 col-md-6 col-lg-5 d-flex flex-column justify-content-start align-items-center ps-3 pt-3"
+              class="col-10 col-md-6 col-lg-5 d-flex flex-column justify-content-start align-items-center pt-3"
             >
-              <div
-                class="d-flex gap-3 justify-content-center align-items-center ps-4"
-              >
-                <div class="d-flex gap-0 flex-column align-items-end">
-                  <h4 class="fs-6 mb-0 fw-bold">Internet Exclusive Offer</h4>
-                  <p class="fs-6 mb-0">Available to US Residents Only</p>
+              <div class="ps-5">
+                <div
+                  class="d-flex gap-3 justify-content-center align-items-center ps-4"
+                >
+                  <div class="d-flex gap-0 flex-column align-items-end">
+                    <h4 class="fs-6 mb-0 fw-bold">Internet Exclusive Offer</h4>
+                    <p class="fs-6 mb-0">Available to US Residents Only</p>
+                  </div>
+                  <div class="">
+                    <img src="img/flag.png" alt="" class="img-fluid" />
+                  </div>
                 </div>
-                <div class="">
-                  <img src="img/flag.png" alt="" class="img-fluid"/>
+                <div
+                  class="d-flex align-items-center justify-content-center py-2 py-lg-4"
+                >
+                  <img src="img/logo.png" alt="" />
                 </div>
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-center py-2 py-lg-4"
-              >
-                <img src="img/logo.png" alt="" />
-              </div>
-              <div
-                class="d-flex align-items-center justify-content-center flex-column text-center heading-galdeano"
-                style="color: #ed185b; font-family: Galdeano"
-              >
-                <span class="fs-3">ACHIEVE</span>
-                <h1 class="visibly_younger_text">
-                  VISIBLY <br />
-                  YOUNGER
-                </h1>
-                <p class="fs-3">LOOKING SKIN</p>
-              </div>
-              <div class="text-center mb-2">
-                <h5 class="info_bar_text fw-bold">Brighten Skin's Appearance</h5>
-                <ul
-                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                <div
+                  class="d-flex align-items-center justify-content-center flex-column text-center heading-galdeano"
+                  style="color: #ed185b; font-family: Galdeano"
                 >
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="text-center mb-2">
-                <h5 class="info_bar_text fw-bold">Restor Your Radiant, Firmer Skin</h5>
-                <ul
-                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
-                >
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <div class="text-center mb-2">
-                <h5 class="info_bar_text fw-bold">Smooth Look of Stubborn Fine Lines</h5>
-                <ul
-                  class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
-                >
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                  <li>
-                    <a href=""><i class="fa fa-star teal-4f"></i></a>
-                  </li>
-                </ul>
+                  <span class="fs-3">ACHIEVE</span>
+                  <h1 class="visibly_younger_text">
+                    VISIBLY <br />
+                    YOUNGER
+                  </h1>
+                  <p class="fs-3">LOOKING SKIN</p>
+                </div>
+                <div class="text-center mb-2">
+                  <h5 class="info_bar_text fs-6 fw-bold">
+                    Brighten Skin's Appearance
+                  </h5>
+                  <ul
+                    class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                  >
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center mb-2">
+                  <h5 class="info_bar_text fs-6 fw-bold">
+                    Restor Your Radiant, Firmer Skin
+                  </h5>
+                  <ul
+                    class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                  >
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="text-center mb-2">
+                  <h5 class="info_bar_text fs-6 fw-bold">
+                    Smooth Look of Stubborn Fine Lines
+                  </h5>
+                  <ul
+                    class="p-0 m-0 list-style-none d-flex gap-1 align-items-center justify-content-center"
+                  >
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                    <li>
+                      <a href=""><i class="fa fa-star teal-4f"></i></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div class="pt-4">
-                <p class="text-light fs-5 fw-bold mb-0 pe-md-5 pe-lg-1">
+              <div
+                class="pt-4 d-flex align-items-center justify-content-center"
+                style="
+                  background: url(./img/arrrow-red.png);
+                  height: max-content;
+                  background-repeat: no-repeat;
+                  background-position: 100%;
+                  background-size: auto;
+                "
+              >
+                <p
+                  class="text-white fs-3 ps-2 pe-5 font-impact"
+                  style="letter-spacing: -1px; font-weight: 600"
+                >
                   HURRY! CLAIM YOUR TRIAL TODAY!
                 </p>
               </div>
             </div>
 
             <div
-              class="col-12 col-md-4 card border-top-0 mt-4 mt-lg-0 rounded-0"
+              class="col-12 col-md-4 card border-top-0 mt-4 mt-md-0 rounded-0 hero-calculator"
               style="border: 3px solid #afb4c6"
             >
               <div
                 class="card-header text-white rounded-0 py-4 px-2 text-uppercase fw-bold fs-md-7"
-                style="background-color: #595f6f"
+                style="background-color: #595f6f; letter-spacing: -1px"
               >
                 Only
                 <span class="text-white rounded px-1 py-2 fw-bold bg-dark"
@@ -277,7 +379,10 @@
                 >
                 Trials Available Now!
               </div>
-              <div class="card-body" style="background-color: #e7e8ef">
+              <div
+                class="card-body"
+                style="background-color: #e7e8ef; color: #050e3a"
+              >
                 <h2 class="py-3 text-center fw-bold fs-5 text-uppercase">
                   Tell us where to send
                   <span class="d-block fw-bolder fs-4">Your Trial Bottle</span>
@@ -292,7 +397,7 @@
                         >First Name:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -311,7 +416,7 @@
                         >Last Name:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -330,7 +435,7 @@
                         >Address:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -349,7 +454,7 @@
                         >Zip:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -368,7 +473,7 @@
                         >City:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -387,7 +492,7 @@
                         >State:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <select class="form-select fs-8 px-1" aria-label="">
                         <option selected></option>
                         <option value="1">One</option>
@@ -404,7 +509,7 @@
                         >Phone:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -423,7 +528,7 @@
                         >Email:</label
                       >
                     </div>
-                    <div class="col-md-8 px-0 col-lg-9">
+                    <div class="col-md-8 px-0 col-lg-9 ps-2">
                       <input
                         type="text"
                         class="form-control fs-8 px-1"
@@ -470,23 +575,25 @@
           class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column bg-white mt-4 mt-lg-0 pb-3"
         >
           <div
-            class="col-12 col-lg-7 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+            class="col-12 col-lg-7 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row font-monsterrat"
           >
             <h2
-              class="col-12 col-md-3  d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              class="col-12 col-md-3 d-inline px-2 py-3 text-uppercase letter-close fs-4 fw-bold mb-0"
               style="background-color: #ed145b"
             >
               Featured
             </h2>
             <h2
-              class="col-12 col-md-9 blkH2 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+              class="blkH2 col-12 col-md-9 blkH2 fs-5 px-2 py-3 fw-bold mb-0 bg-black"
             >
               The Science Behind Martha's Cosmetics
             </h2>
           </div>
           <div class="d-flex flex-md-row flex-column pt-md-3 pt-lg-0">
             <div class="col-12 col-md-7">
-              <div class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2">
+              <div
+                class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2"
+              >
                 <p class="">
                   Seventy five percent of our skin is comprised of water and
                   collagen. Our skin is exposed to harsh UVA and UVB radiation
@@ -501,9 +608,19 @@
                 </p>
 
                 <div class="position-relative">
-                  <img src="./img/logo.png" alt="" class="position-absolute featured_absolute_img_size featured_absolute_img_left" style="width: 130px; height: 40px; top: -6px; left: 80px;"/>
-                  <img src="./img/logo.png" alt="" class="position-absolute featured_absolute_img_size" style="width: 130px; height: 40px; top: -6px; right: 0px;" />
-                  
+                  <img
+                    src="./img/logo.png"
+                    alt=""
+                    class="position-absolute featured_absolute_img_size featured_absolute_img_left"
+                    style="width: 130px; height: 40px; top: -6px; left: 80px"
+                  />
+                  <img
+                    src="./img/logo.png"
+                    alt=""
+                    class="position-absolute featured_absolute_img_size"
+                    style="width: 130px; height: 40px; top: -6px; right: 0px"
+                  />
+
                   <img src="./img/graph.jpg" alt="" class="img-fluid" />
                 </div>
               </div>
@@ -511,30 +628,38 @@
             <div
               class="col-12 col-md-5 d-flex justify-content-center align-items-md-end"
             >
-              <img src="./img/science.jpg" alt="" class="w-100 img-fluid h-75" />
+              <img src="./img/science.jpg" alt="" class="w-100 img-fluid" />
             </div>
           </div>
         </div>
       </div>
 
       <div class="w-100 d-flex justify-content-center">
-        <div class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column bg-white pt-4">
+        <div
+          class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column bg-white pt-4"
+        >
           <div
             class="w-100 d-flex justify-content-center justify-content-md-end"
             style="
               background: url(./img/simulation.jpg) top center;
               height: max-content;
               background-repeat: no-repeat;
+              background-size: cover;
             "
           >
-            <div class="col-12 col-md-6 col-lg-5 position-relative simulation_inner" style="">
+            <div
+              class="col-12 col-md-6 col-lg-5 position-relative simulation_inner"
+              style=""
+            >
               <img
                 src="img/spot-header.png"
                 alt=""
                 class="spot-header position-absolute d-md-flex d-none"
                 style="top: -40px"
               />
-              <div class="d-flex flex-column benefits_content_sec gap-0 gap-md-2 gap-lg-3 pt-5 pt-xl-5">
+              <div
+                class="d-flex flex-column benefits_content_sec gap-0 gap-md-2 pb-md-3 pt-5"
+              >
                 <div
                   class="text-white d-flex flex-wrap p-2"
                   style="background-color: #595f70; font-size: 22px"
@@ -617,7 +742,10 @@
             </div>
           </div>
 
-          <div class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3" style="background-color: #595f70">
+          <div
+            class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3"
+            style="background-color: #595f70"
+          >
             <div class="d-flex flex-column text-white">
               <p class="fs-3 fw-bold mb-0">
                 ACHIEVE VISIBLY YOUNGER LOOKING SKIN!
@@ -636,19 +764,21 @@
       </div>
 
       <div class="w-100 d-flex justify-content-center my-4">
-        <div class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column bg-white pb-3 h-100">
+        <div
+          class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column bg-white pb-3 h-100"
+        >
           <div
-            class="col-12 col-lg-9  position-relative exclusive_section w-subheading bg-black text-white d-flex flex-column flex-md-row"
-            style="height: max-content;"
+            class="col-12 col-lg-9 position-relative exclusive_section w-subheading bg-black text-white d-flex flex-column flex-md-row font-monsterrat"
+            style="height: max-content"
           >
             <h2
-              class="col-12 col-md-3 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              class="col-12 col-md-3 d-inline px-2 py-3 text-uppercase letter-close fs-4 fw-bold mb-0"
               style="background-color: #ed145b"
             >
               EXCLUSIVE
             </h2>
             <h2
-              class="blkH2 col-12 col-md-9 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+              class="blkH2 col-12 col-md-9 fs-5 px-2 py-3 fw-bold mb-0 bg-black"
             >
               Achieve Healthy, Younger Looking Skin
             </h2>
@@ -656,7 +786,9 @@
 
           <div class="d-flex flex-md-row flex-column pt-md-3 pt-lg-0">
             <div class="col-12 col-md-6">
-              <div class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2">
+              <div
+                class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2"
+              >
                 <ul class="list-style-none p-0 m-0">
                   <li class="d-flex mb-2 gap-3 align-items-center fw-bold">
                     <span class="p-1 bg-green-00e d-inline"></span> NO INVASIVE
@@ -694,7 +826,7 @@
             <div
               class="col-12 col-md-6 exclusive_section_img_container d-flex align-items-center justify-content-center"
               style="
-                background: url(./img/sec-3-jar.jpg) top center;
+                background: url(./img/sec-3-jar.jpg) center/ 100%;
                 background-repeat: no-repeat;
               "
             >
@@ -709,27 +841,38 @@
           <div class="d-flex flex-md-row flex-column">
             <div class="col-12 col-md-6 d-flex position-relative">
               <img src="./img/girls_1.jpg" alt="" class="w-100 img-fluid" />
-              <p class="position-absolute text-white fs-5 fw-bold text-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 28px;">#Martha's <br/>Cosmetics
-                <br/>It's Unanimous</p>
+              <p
+                class="position-absolute text-white fs-5 fw-bold text-center"
+                style="
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  line-height: 28px;
+                "
+              >
+                #Martha's <br />Cosmetics <br />It's Unanimous
+              </p>
             </div>
             <div class="col-12 col-md-6">
               <div
-                class="col-12 w-100 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+                class="col-12 w-100 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row font-monsterrat"
               >
                 <h2
-                  class="col-12 col-md-5 col-lg-4 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+                  class="col-12 col-md-5 col-lg-4 d-inline px-2 py-3 text-uppercase letter-close fs-4 fw-bold mb-0"
                   style="background-color: #ed145b"
                 >
                   SPOTLIGHT
                 </h2>
                 <h2
-                  class="col-12 col-md-7 col-lg-8 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+                  class="blkH3 col-12 col-md-7 col-lg-8 fs-5 px-2 py-3 fw-bold mb-0 bg-black"
                 >
                   What's all the buzz about?
                 </h2>
               </div>
-              <div class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2">
-                <p class="fw-bold mb-md-0 mb-lg-2 " style="font-size: 20px">
+              <div
+                class="p-3 p-lg-5 d-flex align-items-start flex-column gap-2"
+              >
+                <p class="fw-bold mb-md-0 mb-lg-2" style="font-size: 20px">
                   The New Injection-Free Solution
                 </p>
                 <p class="">
@@ -754,7 +897,10 @@
             </div>
           </div>
 
-          <div class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3" style="background-color: #595f70">
+          <div
+            class="w-100 d-flex flex-column flex-lg-row px-4 px-md-5 py-3"
+            style="background-color: #595f70"
+          >
             <div class="d-flex flex-column text-white">
               <p class="fs-3 fw-bold mb-0">
                 ACHIEVE VISIBLY YOUNGER LOOKING SKIN!
@@ -773,26 +919,28 @@
       </div>
 
       <div class="d-flex flex-column align-items-center mt-4">
-        <div class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column flex-md-row pb-3">
-          <img src="./img/ing-1.jpg" alt="" class="col-md-4" />
-          <img src="./img/ing-2.jpg" alt="" class="col-md-4" />
-          <img src="./img/ing-3.jpg" alt="" class="col-md-4" />
+        <div
+          class="col-12 col-md-12 col-lg-11 col-xl-8 d-flex flex-column flex-md-row justify-content-between pb-3"
+        >
+          <img src="./img/ing-1.jpg" alt="" class="col-12 col-md-4 pe-md-2" />
+          <img src="./img/ing-2.jpg" alt="" class="col-12 col-md-4 px-md-2" />
+          <img src="./img/ing-3.jpg" alt="" class="col-12 col-md-4 ps-md-2" />
         </div>
       </div>
 
       <div class="d-flex flex-column align-items-center mt-4">
         <div class="col-12 col-md-12 col-lg-11 col-xl-8 bg-white">
           <div
-            class="col-12 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row"
+            class="col-12 position-relative w-subheading bg-black text-white d-flex flex-column flex-md-row font-monsterrat"
           >
             <h2
-              class="col-12 col-md-4 col-lg-4 d-inline px-2 py-3 text-uppercase font-montserrat fs-4 fw-bold mb-0"
+              class="col-12 col-md-4 col-lg-4 d-inline px-2 py-3 text-uppercase letter-close fs-4 fw-bold mb-0"
               style="background-color: #ed145b"
             >
               LIMITED TIME OFFER
             </h2>
             <h2
-              class="col-12 col-md-8 col-lg-8 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-dark"
+              class="blkH3 col-12 col-md-8 col-lg-8 fs-5 px-2 py-3 fw-bold font-montserrat mb-0 bg-black"
             >
               Only Available To First Time Users
             </h2>
@@ -808,13 +956,22 @@
             <div
               class="col-0 col-lg-6 d-flex justify-content-end align-items-center"
             >
-              <img src="./img/qualityBadge.png" alt="" class="img-fluid" />
+              <img
+                src="./img/qualityBadge.png"
+                alt=""
+                class="img-fluid"
+                style="transform: translate(0%, -30%)"
+              />
             </div>
-            <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-md-end justify-content-lg-center gap-4 gap-md-0 gap-lg-4">
+            <div
+              class="col-12 col-lg-6 d-flex justify-content-center justify-content-md-end justify-content-lg-center gap-4 gap-md-0 gap-lg-0"
+            >
               <div class="col-4 col-lg-5 d-flex align-items-center ml-3">
                 <img src="./img/cream.png" alt="" class="img-fluid" />
               </div>
-              <div class="col-5 col-md-4 col-lg-5 d-flex flex-column align-items-center py-3">
+              <div
+                class="col-5 col-md-4 col-lg-7 d-flex flex-column align-items-center py-4"
+              >
                 <div
                   class="d-flex align-items-center justify-content-center py-2"
                 >
@@ -831,7 +988,7 @@
                   </h1>
                   <p class="fs-3 mb-1">LOOKING SKIN</p>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center w-100">
                   <button
                     class="btn btn-primary text-center py-2 px-2 border-0 fw-bold text-dark"
                   >
@@ -845,7 +1002,9 @@
       </div>
 
       <footer>
-        <div class="container mx-auto container-sm d-flex justify-content-center">
+        <div
+          class="container mx-auto container-sm d-flex justify-content-center"
+        >
           <div class="col-10 col-md-10 col-lg-10 col-xl-8 text-center pt-4">
             <p class="mb-1 fs-14">
               This product has not been evaluated by the FDA. This product is
@@ -864,11 +1023,22 @@
             <p class="mb-4 fs-14">
               substantiated or evaluated by the Food and Drug Administration.
             </p>
-            <div class="mb-2 fs-14" >
-              <a href="" style="color: #8a8a8a; text-decoration: none;">CONTACT US</a> | <a href="" style="color: #8a8a8a; text-decoration: none;">TERMS AND CONDITIONS</a> |
-              <a href="" style="color: #8a8a8a; text-decoration: none;">PRIVACY POLICY</a>
+            <div class="mb-2 fs-14">
+              <a href="" style="color: #8a8a8a; text-decoration: none"
+                >CONTACT US</a
+              >
+              |
+              <a href="" style="color: #8a8a8a; text-decoration: none"
+                >TERMS AND CONDITIONS</a
+              >
+              |
+              <a href="" style="color: #8a8a8a; text-decoration: none"
+                >PRIVACY POLICY</a
+              >
             </div>
-            <p class="fs-14 fs-14" style="color: #8a8a8a;">2023 © MARTHA'S COSMETICS</p>
+            <p class="fs-14 fs-14" style="color: #8a8a8a">
+              2023 © MARTHA'S COSMETICS
+            </p>
           </div>
         </div>
       </footer>
